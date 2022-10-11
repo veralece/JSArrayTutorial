@@ -1,0 +1,106 @@
+@import "normalize.css";
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+button {
+    cursor: pointer;
+}
+
+main h1 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+table {
+    border-spacing: 0;
+}
+
+textarea {
+    resize: none;
+    height: 25vh;
+    width: 90%;
+    font-family: monospace;
+}
+
+pre, p, h3, article>ul, .article-header, #dataDictionary table {
+    width: 65%;
+    margin: 1em auto;
+}
+
+pre {
+    position: relative;
+}
+
+td {
+    border: 1px solid darkgray;
+    padding: .5em;
+}
+
+a, a:visited {
+    color: slategray;
+}
+
+.article-header {
+    text-align: left;
+}
+
+.code-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    background: lightgrey;
+    height: 100vh;
+    width: calc(25% - 2em);
+}
+
+.code-bar p {
+    width: auto;
+}
+
+.code-bar button {
+    display: block;
+    width: 40%;
+}
+
+.inline-code {
+    background-color: #F0F0F0;
+}
+
+.run-code-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 661px) and (max-width: 1024px) {
+    pre, p, article>ul, .article-header, #dataDictionary table {
+        width: 75%;
+        margin: 1em auto;
+    }
+    body {
+        grid-template-columns: 1fr 2fr;
+    }
+    .code-bar {
+        width: calc(33% - 2em);
+    }
+}
+
+@media screen and (max-width: 660px) {
+    pre, p, article>ul, .article-header, #dataDictionary table {
+        width: 85%;
+        margin: 1em auto;
+    }
+    body {
+        grid-template-columns: 1fr;
+    }
+    nav, .run-code-btn {
+        display: none;
+    }
+}
